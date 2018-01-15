@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+api:
+  webSocketUrl: ${WEB_SOCKET_URL}
+  baseUrl: ${BASE_API_URL}
+  token: ${API_TOKEN}
+  acceptLanguages: nl-NL,en;q=0.8
+  byPostfix: /trades
+  sellPostfix: /portfolio/positions/
+
+bot:
+  productId: ${PRODUCT_ID}
+  buyPrice: 18634.4
+  upperLimitSellPrice: 11634.4
+  lowerLimitSellPrice: 11634.4
+  leverage: 2
+  source: NEWS_ITEM
+  investingAmount:
+    currency: BUX
+    decimals: 2
+    amount: 200.00

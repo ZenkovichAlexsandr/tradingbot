@@ -1,0 +1,18 @@
+apply plugin: "findbugs"
+
+String findbugsLocation = "./gradle/plugins/findbugs"
+
+findbugs {
+    sourceSets = [sourceSets.main]
+    effort = "max"
+    toolVersion  = "3.0.+"
+    reportLevel = "high"
+    excludeFilter = file("$findbugsLocation/findBugsExclude.xml")
+}
+
+findbugsMain {
+    reports {
+        html.enabled = true
+        xml.enabled = false
+    }
+}

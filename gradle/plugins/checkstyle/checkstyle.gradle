@@ -1,0 +1,10 @@
+apply plugin: "checkstyle"
+
+String checkstyleLocation = "./gradle/plugins/checkstyle"
+
+checkstyle {
+    toolVersion = "7.0"
+    configFile = file("$checkstyleLocation/checkstyle.xml")
+    ignoreFailures = false
+    checkstyleTest.enabled = false
+}
